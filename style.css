@@ -1,0 +1,42 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { margin: 0; background-color: #f0f4f8; color: #334155; display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Навігація */
+header { background: #1e293b; padding: 15px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.logo { color: white; font-size: 24px; font-weight: bold; text-decoration: none; }
+.nav-links a { color: #cbd5e1; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #ffffff; }
+
+/* Основний контент */
+main { flex: 1; max-width: 1000px; margin: 40px auto; padding: 0 20px; width: 100%; }
+
+/* Стилі Калькулятора (з минулого коду) */
+.calculator-container { background: #ffffff; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); overflow: hidden; }
+.calculator-header { background: #3b82f6; color: #ffffff; padding: 30px 40px; text-align: center; }
+.calculator-header h1 { margin: 0 0 10px; font-size: 28px; }
+.calculator-body { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px; }
+.form-group { margin-bottom: 20px; }
+label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
+input { width: 100%; padding: 14px 16px; border: 1px solid #cbd5e1; border-radius: 12px; font-size: 16px; background: #f8fafc; }
+input:focus { outline: none; border-color: #3b82f6; background: #ffffff; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); }
+.calc-btn { width: 100%; padding: 16px; background: #2563eb; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.calc-btn:hover { background: #1d4ed8; }
+.result-section { background: #f8fafc; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0; }
+.result-box { display: flex; flex-direction: column; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.result-box.highlight { background: #e0f2fe; padding: 20px; border-radius: 12px; border-bottom: none; }
+.result-box.highlight .result-value { color: #0369a1; font-size: 28px; }
+.result-label { font-size: 14px; color: #64748b; font-weight: 600; margin-bottom: 6px;}
+.result-value { font-size: 22px; font-weight: 700; color: #0f172a; }
+
+/* Інформаційні сторінки */
+.info-card { background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.info-card h1 { margin-top: 0; color: #1e293b; }
+
+/* Футер */
+footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+
+@media (max-width: 768px) {
+    .calculator-body { grid-template-columns: 1fr; padding: 24px; gap: 30px; }
+    .nav-container { flex-direction: column; gap: 15px; }
+}
